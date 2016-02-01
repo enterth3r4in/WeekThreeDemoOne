@@ -1,1 +1,6 @@
 C:\Users\as600\Documents\GitHub\WeekThreeDemoOne\WeekThreeDemoOne\bin\Debug\WeekThreeDemoOne.exe.config
+C:\Users\as600\Documents\GitHub\WeekThreeDemoOne\WeekThreeDemoOne\bin\Debug\WeekThreeDemoOne.exe
+C:\Users\as600\Documents\GitHub\WeekThreeDemoOne\WeekThreeDemoOne\bin\Debug\WeekThreeDemoOne.pdb
+C:\Users\as600\Documents\GitHub\WeekThreeDemoOne\WeekThreeDemoOne\obj\Debug\WeekThreeDemoOne.csprojResolveAssemblyReference.cache
+C:\Users\as600\Documents\GitHub\WeekThreeDemoOne\WeekThreeDemoOne\obj\Debug\WeekThreeDemoOne.exe
+C:\Users\as600\Documents\GitHub\WeekThreeDemoOne\WeekThreeDemoOne\obj\Debug\WeekThreeDemoOne.pdb
