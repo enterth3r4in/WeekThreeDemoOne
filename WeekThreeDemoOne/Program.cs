@@ -19,23 +19,26 @@ namespace WeekThreeDemoOne
             decimal price = 0.00m;
             decimal shippingConstantPerPound = 0.89m;
 
-            ID          = 185181;
-            firstName   = "Alexi";
-            lastName    = "Stukov";
+            Console.Write("Enter a 6-digit user ID: ");
+            ID = int.Parse(Console.ReadLine());
+            Console.Write("Enter your first name: ");
+            firstName = Console.ReadLine();
+            Console.Write("Enter your last name: ");
+            lastName = Console.ReadLine();
 
             Console.WriteLine("Customer Info");
             Console.WriteLine("[ID, last, first]\n");
             Console.WriteLine(ID + " " + lastName + ", " + firstName + "\n");
 
             itemDescription = "Spinning Top";
-            quantity = 15;
+            quantity = 236;
             weight = 1.27;
             price = 3.76m;
 
             Console.WriteLine("First Order: ");
             Console.WriteLine("Order of " + quantity + " of " + "'"+itemDescription+"'");
             Console.WriteLine("Approx Cost (before shipping): " + quantity * price);
-            Console.WriteLine("Shipping Cost: " + (decimal)weight * shippingConstantPerPound);
+            Console.WriteLine("Shipping Cost: " + (decimal)(weight * quantity) * shippingConstantPerPound);
             Console.WriteLine("Total Cost: " + ((quantity * price) + ((decimal)weight * shippingConstantPerPound)));
         }
     }
