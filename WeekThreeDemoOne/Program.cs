@@ -18,28 +18,46 @@ namespace WeekThreeDemoOne
             double  weight = 0.00;
             decimal price = 0.00m;
             decimal shippingConstantPerPound = 0.89m;
+            decimal approximateCost;
+            decimal shippingCost;
+            decimal finalPrice;
 
-            Console.Write("Enter a 6-digit user ID: ");
-            ID = int.Parse(Console.ReadLine());
-            Console.Write("Enter your first name: ");
-            firstName = Console.ReadLine();
-            Console.Write("Enter your last name: ");
-            lastName = Console.ReadLine();
+            try
+            {
+                Console.Write("Enter a 6-digit user ID: ");
+                ID = int.Parse(Console.ReadLine());
+                Console.Write("Enter your first name: ");
+                firstName = Console.ReadLine();
+                Console.Write("Enter your last name: ");
+                lastName = Console.ReadLine();
 
-            Console.WriteLine("Customer Info");
-            Console.WriteLine("[ID, last, first]\n");
-            Console.WriteLine(ID + " " + lastName + ", " + firstName + "\n");
+                Console.WriteLine("Customer Info");
+                Console.WriteLine("[ID, last, first]\n");
+                Console.WriteLine(ID + " " + lastName + ", " + firstName + "\n");
 
-            itemDescription = "Spinning Top";
-            quantity = 236;
-            weight = 1.27;
-            price = 3.76m;
+                Console.Write("Enter a product description: ");
+                itemDescription = Console.ReadLine();
+                Console.Write("Enter quantity of product to buy: ");
+                quantity = int.Parse(Console.ReadLine());
+                Console.Write("Enter the weight of each item: ");
+                weight = double.Parse(Console.ReadLine());
+                Console.Write("Enter the price of each item: ");
+                price = decimal.Parse(Console.ReadLine());
 
-            Console.WriteLine("First Order: ");
-            Console.WriteLine("Order of " + quantity + " of " + "'"+itemDescription+"'");
-            Console.WriteLine("Approx Cost (before shipping): " + quantity * price);
-            Console.WriteLine("Shipping Cost: " + (decimal)(weight * quantity) * shippingConstantPerPound);
-            Console.WriteLine("Total Cost: " + ((quantity * price) + ((decimal)weight * shippingConstantPerPound)));
+                approximateCost = quantity * price;
+                shippingCost = quantity * ((decimal)weight * shippingConstantPerPound);
+                finalPrice = approximateCost + shippingCost;
+
+                Console.WriteLine("\n\nFirst Order:\n");
+                Console.WriteLine("You have ordered " + quantity + " of " + itemDescription);
+                Console.WriteLine("The approximate price (without shipping cost): " + approximateCost);
+                Console.WriteLine("Shipping cost: " + shippingCost);
+                Console.WriteLine("Final price: " + finalPrice);
+            }catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+                Console.WriteLine(e.StackTrace);
+            }
         }
     }
 }
